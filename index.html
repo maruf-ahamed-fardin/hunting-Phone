@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="text-6xl text-center bg-gray-200 h-20">Hunting Phone</h2>
+    </header>
+    <main class="container mx-auto mt-4 ">
+
+        <section class="bg-gray-100 p-4 m-4 text-center rounded-lg flex justify-center gap-4">
+            <input id="search-field" type="text" placeholder="Search..." class="input input-bordered text-center max-w-xs w-full" />
+            <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+        </section>
+
+        <!-- loader -->
+        
+
+        <section>
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-xl"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              
+            </div>
+
+            <div id="show-all-container" class="hidden  text-center ">
+                <button onclick="handleShowAll()" class="btn btn-accent ">Show All</button>
+            </div>
+        </section>
+
+        <!-- modal -->
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="Show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="show-detail-phone-name" class="text-3xl font-bold"></h3>
+    <div id="show-detail-container"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
